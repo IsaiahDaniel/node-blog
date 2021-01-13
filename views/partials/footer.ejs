@@ -1,7 +1,24 @@
 
+
+
   <footer>
     copyright &copy; 2020;
   </footer>
+
+  <script>
+    const trashcan = document.querySelector('a.delete');
+
+    trashcan.addEventListener('click', e => {
+      const endPoint = `/blogs/${trashcan.dataset.doc}`;
+
+      fetch(endPoint, {
+        method: 'DELETE'
+      })
+      .then(response => response.json())
+      .then(data => window.location = data.redirect)
+      .catch(err => console.log(err))
+    });
+  </script>
 
 </body>
 </html>

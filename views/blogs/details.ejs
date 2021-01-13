@@ -1,0 +1,19 @@
+<%- include('../partials/head.ejs') %> 
+  
+  <%- include('../partials/nav.ejs');  %> 
+
+  <div class="details content">
+    <h2><%= blog.title %> </h2>
+    <div class="content">
+      <p><%= blog.body %> </p>
+    </div>
+    <a href="#" data-doc="<%= blog._id %>" class="delete">
+      <img src="/trashcan.svg" alt="">
+    </a>
+  </div>
+
+<%- include('../partials/footer.ejs') %> 
+
+
+
+
